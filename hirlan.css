@@ -1,0 +1,276 @@
+/*CSS ini untuk efek scroll halus */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+::selection {
+    color: black;
+    background: white;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+nav {
+    position: fixed;
+    background: rgba(255, 255, 255, 0); /* Menggunakan rgba untuk transparansi */
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+}
+
+nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo a {
+    text-decoration: none;
+    color: maroon;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.menu ul {
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li:first-child {
+    margin-left: 0px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background: maroon;
+    color: white;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.background {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.posisi {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.posisi h1 {
+    color: maroon;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.posisi h2 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.posisi h3 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.posisi p {
+    color: white;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.tombol button {
+    background: transparent; /* Membuat latar belakang transparan */
+    color: white; /* Warna teks */
+    border: 2px solid maroon; /* Membuat border */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tombol button:hover {
+    color: maroon; /* Mengubah warna teks saat hover */
+    border-color: maroon; /* Mengubah warna border saat hover */
+}
+
+.tombol button span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.tombol button:hover span {
+    transform: rotate(20deg); /* Menambahkan efek rotasi saat hover */
+}
+
+/* Background Beranda */
+#beranda {
+    background: url('p1.jpg') center center;
+    background-size: cover;
+}
+
+/* Background Profil */
+#profil {
+    background: url('p2.jpg')center center;
+    background-size: cover;
+}
+
+/* Background Audio Video */
+#audio-video {
+    background: url('p3.jpg') center;
+    background-size: cover;
+}
+
+/* Background Tentang */
+#tentang {
+    background: url('p4.jpg')center center;
+    background-size: cover;
+    padding: 200px;
+}
+
+/* Background Berita */
+#berita {
+    background: url('p5.jpg') center;
+    background-size: cover;
+}
+
+
+/* CSS untuk bagian audio dan video */
+.media {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.media h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.media video, .media audio {
+    width: 80%;
+    margin: 20px 0;
+}
+
+/* CSS untuk bagian berita */
+.news {
+    padding: 50px 20px;
+}
+
+.news h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.news .article {
+    margin-bottom: 20px;
+}
+
+.news .article h3 {
+    font-size: 24px;
+}
+
+.news .article p {
+    font-size: 18px;
+}
+
+/* CSS untuk menu akhir */
+.footer {
+    background: rgb(21, 21, 21);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.highlight {
+    font-weight: bold; /* Membuat teks dalam elemen ini menjadi bold */
+    color: #00f0ff; /* Anda bisa menambahkan warna atau gaya lain jika diinginkan */
+}
+.logo a {
+    color: #00f0ff; /* Ganti dengan warna yang Anda inginkan */
+    font-weight: bold; /* Opsional: membuat teks menjadi bold */
+}
+.small-video {
+    width: 200px; /* Mengatur lebar video */
+    height: 400px; /* Mengatur tinggi video */
+}
+
+.small-audio + p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff; /* Ubah warna teks sesuai kebutuhan */
+}
