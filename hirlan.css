@@ -230,8 +230,8 @@ nav .menu {
 
 /* CSS untuk menu akhir */
 .footer {
-    background: rgb(21, 21, 21);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: maroon;
     text-align: center;
     padding: 20px 0;
 }
